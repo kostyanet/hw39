@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Race Start</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header><h2>Start a Race</h2></header>
+
+    <form action="#" th:action="@{/race/start}" th:object="${bet}" method="post" style="width:300px">
+        <div class="mb-3">
+            <label for="horsesTotal" class="form-label">Horses total</label>
+            <input type="number" class="form-control" id="horsesTotal" th:field="*{horsesTotal}">
+        </div>
+        <div class="mb-3">
+            <label for="betHorsePosition" class="form-label">Bet horse place</label>
+            <input type="number" class="form-control" id="betHorsePosition" th:field="*{betHorsePosition}">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>

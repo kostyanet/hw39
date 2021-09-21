@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Race Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header><h2>Start a Race</h2></header>
+
+    <h3 th:if="${race == null}">No race with such id.</h3>
+
+    <table class="table" th:unless="${race == null}" style="width:400px">
+        <tbody>
+        <tr><th>ID</th><td th:text="${race.id}"/></tr>
+        <tr><th>Created</th><td th:text="${race.created}"/></tr>
+        <tr><th>Horses total</th><td th:text="${race.horsesTotal}"/></tr>
+        <tr><th>Horses order</th><td th:text="${race.horsesOrdered}"/></tr>
+        <tr><th>Bet horse result</th><td th:text="${race.betHorseResult}"/></tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
